@@ -221,7 +221,7 @@ class CompanySpider(webdriver.Chrome):
     def scrape_companies(self):
         workbook = xlsxwriter.Workbook('companies.xlsx')
         print(workbook)
-        for letter in self.alphabets[0:2]:
+        for letter in self.alphabets:
             data = self.scrape_alphabet_details(letter)       
             work_sheet = workbook.add_worksheet(letter)
             work_sheet.write('A1', 'NAME')
